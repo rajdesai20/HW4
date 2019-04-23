@@ -1,0 +1,8 @@
+1. hdfs dfs -get /user/tatavag/nyc.data - For getting the file into our directory
+2. Remane the nyc.data file to .csv file -- To access the data
+3. hadoop fs -put nyc.csv /user/desairj -- Placing the file into the hadoop system 
+4. vi map.py  -- Editing the map file
+5. vi reduce.py -- Editing the reduce file
+6.hadoop jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar -file /home/desairj/map.py -mapper map.py
+ -file /home/desairj/reduce.py -reducer reduce.py -input nyc.csv -output rajdesai3_output -- Constructing the jar file and getting the output into the file 
+7. hadoop fs -get /user/desairj/rajdesai3_output .  -- Getting the file from the hadoop system.
